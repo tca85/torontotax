@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.github.tca85.torontotax.MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:id="@+id/txvTotal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Price + Tax"
+        android:id="@+id/textView"
+        android:layout_below="@+id/txvTotal"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtPercentage"
+        android:hint="Enter percentage"
+        android:textAlignment="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="13"
+        android:editable="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtNumber"
+        android:hint="Enter Price"
+        android:textAlignment="center"
+        android:layout_marginTop="26dp"
+        android:layout_alignLeft="@+id/edtPercentage"
+        android:layout_alignStart="@+id/edtPercentage"
+        android:layout_below="@+id/edtPercentage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="%"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/edtPercentage"
+        android:layout_toEndOf="@+id/edtPercentage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/btnCalculate"
+        android:layout_below="@+id/edtNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="#981717"
+        android:textColor="#f0e2e2" />
+</RelativeLayout>
